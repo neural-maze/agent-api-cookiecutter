@@ -1,6 +1,6 @@
 services:
   agent-api:
-    container_name: agent-api
+    container_name: {{ cookiecutter.package_name }}
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,11 +9,11 @@ services:
     env_file:
       - .env
     networks:
-      - agent-api-network
+      - {{ cookiecutter.package_name }}-network
 
 volumes:
   data:
 
 networks:
-  agent-api-network:
-    name: agent-api-network
+  {{ cookiecutter.package_name }}-network:
+    name: {{ cookiecutter.package_name }}-network
