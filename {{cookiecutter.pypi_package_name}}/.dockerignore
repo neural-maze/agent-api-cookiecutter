@@ -1,0 +1,9 @@
+.venv/
+.env
+.DS_Store
+.vscode/
+.ruff_cache/
+data/
+notebooks/
+static/
+tests/

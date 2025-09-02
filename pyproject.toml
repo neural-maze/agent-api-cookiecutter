@@ -1,0 +1,39 @@
+[project]
+name = "agent-api-cookiecutter"
+version = "0.1.0"
+description = "Build your Agent API without losing your mind"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "alabaster>=1.0.0",
+    "cookiecutter>=2.6.0",
+    "typer>=0.17.3",
+    "watchdog>=6.0.0",
+]
+[project.optional-dependencies]
+test = [
+    "coverage",
+    "pytest",
+    "pytest-cookies",    
+    "ruff",
+    "ty",
+    "ipdb"
+]
+
+[project.urls]
+homepage = "https://github.com/neural-maze/agent-api-cookiecutter"
+
+[tool.ruff]
+exclude = [
+    "*cookiecutter.pypi_package_name*"
+    ]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+
+[dependency-groups]
+dev = [
+    "rust-just>=1.42.4",
+]
