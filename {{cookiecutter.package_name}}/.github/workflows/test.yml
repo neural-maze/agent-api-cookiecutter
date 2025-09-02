@@ -18,7 +18,7 @@ jobs:
       - name: Install uv and set the python version
         uses: astral-sh/setup-uv@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version:  {% raw %}${{ matrix.python-version }}{% endraw %}
           enable-cache: true
           cache-dependency-glob: uv.lock
       - name: Install the project
