@@ -25,7 +25,7 @@ homepage = "https://github.com/neural-maze/agent-api-cookiecutter"
 
 [tool.ruff]
 exclude = [
-    "*cookiecutter.pypi_package_name*"
+    "*cookiecutter.package_name*"
     ]
 
 [tool.pytest.ini_options]
