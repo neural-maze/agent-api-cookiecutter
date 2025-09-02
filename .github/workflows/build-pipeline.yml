@@ -1,7 +1,4 @@
----
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-name: Cookiecutter PyPackage CI build
+name: Cookiecutter Agent API CI build
 on:
   push:
     branches: [main]
@@ -24,15 +21,3 @@ jobs:
           cache-dependency-glob: uv.lock
       - name: Install the project
         run: uv sync --locked --all-extras
-      # - name: Lint with ruff
-      #   run: |
-      #     # Stop the build if the formatting is bad
-      #     ruff format . --check
-      #     # stop the build if there isz ugly python
-      #     ruff check .
-      - name: Test with pytest
-        run: |
-          pytest tests/
-      # - name: Check types with mypy
-      #   run: |-
-      #     ty check .
