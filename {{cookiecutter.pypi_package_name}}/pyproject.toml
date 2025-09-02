@@ -3,12 +3,6 @@ name = "{{cookiecutter.pypi_package_name}}"
 version = "{{ cookiecutter.first_version }}"
 description = "{{cookiecutter.project_short_description}}"
 readme = "README.md"
-authors = [
-  {name = "{{cookiecutter.full_name}}", email = "{{cookiecutter.email}}"}
-]
-maintainers = [
-  {name = "{{cookiecutter.full_name}}", email = "{{cookiecutter.email}}"}
-]
 classifiers = [
     # TODO
 ]
@@ -17,20 +11,18 @@ dependencies = [
   "typer",
   "fastapi[standard]",
   "loguru",
-  "pydantic-settings",
-  "pre-commit",
-  "ipykernel",
   "pydantic",
+  "pydantic-settings",
+  "ipykernel",
 ]
 requires-python = ">= 3.10"
 
-[project.optional-dependencies]
-test = [
-    "coverage",  # testing
-    "pytest",  # testing
-    "ruff",  # linting
-    "ty", # checking types
-    "ipdb", # debugging
+[dependency-groups]
+dev = [
+    "coverage",
+    "pre-commit",
+    "pytest",
+    "ruff",
 ]
 
 [project.scripts]

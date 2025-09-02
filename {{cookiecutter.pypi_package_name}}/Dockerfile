@@ -13,5 +13,5 @@ RUN uv sync --frozen --no-cache
 # Copy the application into the container.
 COPY src/{{ cookiecutter.project_slug }} {{ cookiecutter.project_slug }}/
 
-CMD ["/app/.venv/bin/fastapi", "run", "{{ cookiecutter.project_slug }}/infrastructure/api.py", "--port", "8000", "--host", "0.0.0.0"]
+CMD ["/app/.venv/bin/fastapi", "run", "{{ cookiecutter.project_slug }}/infrastructure/api/main.py", "--port", "8000", "--host", "0.0.0.0"]
 

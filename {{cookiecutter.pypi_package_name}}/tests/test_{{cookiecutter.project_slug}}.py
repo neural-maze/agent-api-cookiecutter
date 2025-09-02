@@ -1,22 +1,18 @@
-#!/usr/bin/env python
-import pytest
+from fastapi import FastAPI
+from fastapi.testclient import TestClient
 
-"""Tests for `{{ cookiecutter.project_slug }}` package."""
-
-# from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
+app = FastAPI()
 
 
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyfeldroy/cookiecutter-pypackage')
+@app.get("/")
+async def read_main():
+    return {"msg": "Hello World"}
 
 
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+client = TestClient(app)
+
+
+def test_read_main():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.json() == {"msg": "Hello World"}
