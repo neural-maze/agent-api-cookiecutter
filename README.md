@@ -11,7 +11,7 @@
 
 ## Table of Contents
 
-- [Getting Started](#projects)
+- [Getting Started](#getting-started)
 - [Project Examples](#project-examples)
 - [Contributors](#contributors)
 - [License](#license)
