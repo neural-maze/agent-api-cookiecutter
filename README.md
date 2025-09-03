@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Agent API Cookiecutter 🍪</h1>
+  <h1>🍪 Agent API Cookiecutter 🍪</h1>
   <h3>Building Agent Projects without losing your mind</h3>
 </div>
 
