@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Agent API Cookiecutter</h1>
+  <h1>Agent API Cookiecutter 🍪</h1>
   <h3>Building Agent Projects without losing your mind</h3>
 </div>
 
@@ -12,18 +12,22 @@
 ## Table of Contents
 
 - [Getting Started](#projects)
+- [Project Examples](#project-examples)
 - [Contributors](#contributors)
 - [License](#license)
 
-## The motivation behind this cookiecutter
+## The motivation behind this cookiecutter 
 
 Ever since I started creating content, one question keeps coming up:
 
 > How should I structure my Agent projects? 🤔
 
-This cookiecutter is my best attempt to answer that question! It contains the structure I follow when creating Agent APIs.
+This cookiecutter is my best attempt to answer that question. It reflects the structure I personally use when building Agent APIs.
 
-So, give it a try and let me know what you think!
+Give it a spin, adapt it to your workflow, and let me know how it works for you!
+
+
+> This is how the project structure looks like with this cookiecutter 👇
 
 ```
 example-agent-api
@@ -94,8 +98,32 @@ example-agent-api
 
 ## Getting Started
 
+A cookiecutter makes it really easy to create a new project. You just need to have [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) installed.
+
+```bash
+pip install -U cookiecutter
+```
+
+Next, you can use the cookiecutter to spin up a new project:
+
+```bash
+cookiecutter https://github.com/neural-maze/agent-api-cookiecutter.git
+```
+
+After this, you'll be asked to fill in a few details about your project ... and that's it!
+
+### Folder Structure
+
+If you're curious about the folder structure, and what each file and folder is for, you can check my video post on Substack.
+
+[TODO: Add link to the video post]
 
 
+## Project Examples
+
+In this section, I'll share a few sample projects built with this cookiecutter, so you can see practical examples of how it can be applied.
+
+(👷‍♂️ WIP 👷‍♂️)
 
 ## Contributors
 
